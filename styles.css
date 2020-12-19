@@ -2,10 +2,10 @@
 
 :root {
     --main-txt-color: rgba(36, 46, 66, 0.7);
-    --xtra-color:#0065FC;
+    --xtra-color: #0065FC;
     --main-bg-color: hsl(0, 0%, 99%);
     --xtra-bg-color: #F2F2F2;
-    --xtra-light-color:#DEEBFF;
+    --xtra-light-color: #DEEBFF;
     --dark-color: #242e42;
     --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.05);
     --box-shadow-hover: 0 4px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
@@ -47,7 +47,8 @@ a {
     color: var(--xtra-color);
 }
 
-a, button {
+a,
+button {
     text-decoration: none;
     cursor: pointer;
     opacity: .9;
@@ -65,7 +66,6 @@ li {
 
 img {
     overflow: auto;
-    zoom: 1
 }
 
 .navContainer {
@@ -89,7 +89,8 @@ img {
     margin-right: 66px;
 }
 
-.filtersContainer, .filtersContainer ul {
+.filtersContainer,
+.filtersContainer ul {
     display: -webkit-flex;
     display: flex;
     flex-direction: row;
@@ -140,19 +141,19 @@ button {
 }
 
 .filter li a span:after {
-    content:'';
+    content: '';
     padding-bottom: 100%;
 }
+
 /* ------ end ------ */
-
-
 
 .resultContainer {
     display: grid;
     grid-template-columns: 3fr 1fr;
 }
 
-.sectionResult, .asideResult {
+.sectionResult,
+.asideResult {
     padding: 37px;
     border-radius: 18px;
     background: var(--xtra-bg-color);
@@ -274,7 +275,8 @@ button {
 
 }
 
-.card h3, .card p {
+.card h3,
+.card p {
     color: var(--main-txt-color);
 }
 
@@ -289,37 +291,37 @@ button {
 .masonryContainer .card {
     border: none;
     width: 300px;
-} 
+}
 
 .masonryContainer .col1 {
     grid-column: 1/2;
     grid-row: 2/6;
-} 
+}
 
 .masonryContainer .col2 {
     grid-column: 2/3;
     grid-row: 2/4;
-} 
+}
 
 .masonryContainer .col3 {
     grid-column: 2/3;
     grid-row: 4/6;
-} 
+}
 
 .masonryContainer .col4 {
     grid-column: 3/4;
     grid-row: 2/6;
-} 
+}
 
 .masonryContainer .col5 {
     grid-column: 4/5;
     grid-row: 2/3;
-} 
+}
 
 .masonryContainer .col6 {
     grid-column: 4/5;
     grid-row: 3/6;
-} 
+}
 
 footer {
     padding: 44px;
@@ -341,16 +343,18 @@ footer {
 }
 
 /* hover */
-
-.card:hover, button:hover {
+.card:hover,
+button:hover {
     background: white;
     box-shadow: var(--box-shadow-hover);
     border-color: white;
 }
 
-.card:hover, a:hover, button:hover {
+.card:hover,
+a:hover,
+button:hover {
     opacity: 1;
     transform: scale(1.01);
-    transition: all .35s cubic-bezier(.25,.45,.45,.95);
+    transition: all .35s cubic-bezier(.25, .45, .45, .95);
     color: var(--xtra-color);
 }
