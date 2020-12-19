@@ -1,11 +1,231 @@
-/*
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;800;900&display=swap');
 
-padding: 50px;
-gap: 28px;
+:root {
+    --main-txt-color: hsla(220, 30%, 20%, 0.7);
+    --xtra-color:#0065FC;
+    --main-bg-color: hsl(0, 0%, 99%);
+    --xtra-bg-color: #F2F2F2;
+    --xtra-light-color:#DEEBFF;
+    --dark-color: #242e42;
+    --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+    --box-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
-gap: 32px;
+html {
+    font-family: 'Raleway', sans-serif;
+    color: var(--main-txt-color);
+    scroll-behavior: smooth;
+}
 
+body {
+    /* display: -webkit-flex;
+    display: flex;
+    flex-direction: column; */
+    background-color: var(--main-bg-color);
+    color: var(--main-txt-color);
+}
 
-gap: 42px;
-*/
+main {
+    padding: 50px;
+}
+
+.navContainer {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.navContainer ul {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navContainer ul li {
+    margin-right: 66px;
+}
+
+form span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--xtra-bg-color);
+        color: white;
+        min-width: 2em;
+        border-radius: 50%;
+        vertical-align: middle;
+}
+
+form span:after {
+    content:'';
+    float: left;
+    width: auto;
+    padding-bottom: 100%;
+}
+
+.resultContainer {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.sectionResult, .asideResult {
+    padding: 37px;
+    border-radius: 18px;
+    background: var(--xtra-bg-color);
+}
+
+.activityContainer {
+    padding-top: 37px;
+}
+
+.mainResult {
+    align-self: start;
+}
+
+.cardsContainer {
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
+
+.asideResult {
+    margin-left: 38px;
+    align-self: start;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.masonryContainer {
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 12rem 2rem 1rem 2rem 10rem; */
+    gap: 40px;
+}
+
+.card {
+    display: -webkit-flex;
+    display: flex;
+    width: 247px;
+    border-radius: 18px;
+    background: var(--main-bg-color);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    border: solid 6px white;
+    margin: 0;
+    padding: 0;
+}
+
+.mainResult .card a {
+    width: 247px;
+}
+
+.asideResult .card {
+    width: 340px;
+    flex-direction: row;
+}
+
+.card h3 {
+    font-size: 10px;
+}
+
+.card .txt {
+    height: 54px;
+    margin-left: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--xtra-color);
+    cursor: pointer;
+}
+
+.fa-ico {
+    height: 14px;
+}
+
+.filter a {
+    color: var(--main-txt-color);
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    overflow: auto;
+    zoom: 1
+}
+
+figcaption {
+    margin-left: 15px;
+}
+
+.card h3, .card p {
+    color: var(--main-txt-color);
+}
+
+.card span {
+    color: var(--xtra-color);
+}
+
+.masonryContainer .card {
+    border: none;
+    width: auto;
+} 
+
+.masonryContainer .col1 {
+    grid-row: 2/7;
+    grid-column: 1/2;
+} 
+
+.masonryContainer .col2 {
+    grid-column: 2/3;
+    grid-row: 2/5;
+} 
+
+.masonryContainer .col3 {
+    grid-column: 2/3;
+    grid-row: 6/7;
+} 
+
+.masonryContainer .col4 {
+    grid-column: 3/4;
+    grid-row: 2/7;
+} 
+
+.masonryContainer .col5 {
+    grid-column: 4/5;
+    grid-row: 2/3;
+} 
+
+.masonryContainer .col6 {
+    grid-column: 4/5;
+    grid-row: 4/7;
+} 
+
+footer {
+    padding: 50px;
+    width: 100vw;
+    background: var(--xtra-bg-color);
+}
