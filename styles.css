@@ -8,7 +8,7 @@
     --main-bg-color: hsl(0, 0%, 99%);
     --xtra-bg-color: #F2F2F2;
     --xtra-light-color: #DEEBFF;
-    --alt-light-color: #f2f2f3;
+    --alt-light-color: hsl(240, 4%, 94%);
     --dark-color: #242e42;
     --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.05);
     --box-shadow-hover: 0 4px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
@@ -35,9 +35,6 @@ html {
 }
 
 body {
-    /* display: -webkit-flex;
-    display: flex;
-    flex-direction: column; */
     background-color: var(--main-bg-color);
     color: var(--alt-txt-color);
 }
@@ -133,7 +130,17 @@ img {
     margin: 0 10px;
 }
 
-.filtersContainer ul li button {
+button {
+    margin: 28px;
+    background: white;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+}
+
+.filtersContainer button {
+    border: solid 3px var(--xtra-bg-color);
+    border-radius: 28px;
     display: -webkit-flex;
     display: flex;
     flex-direction: row;
@@ -144,32 +151,51 @@ img {
     font-weight: bold;
 }
 
-button {
-    margin: 28px;
-    border: solid 3px var(--xtra-bg-color);
-    border-radius: 28px;
-    background: white;
-    cursor: pointer;
-    font-size: 18px;
+.info {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.fa-ico {
+    height: 18px;
+}
+
+.info-ico {
+    height: 12px;
 }
 
 /* search bar icon circle */
-.filter li a span {
+.filter span,
+.infoContainer {
     display: -webkit-flex;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 2.5em;
     border-radius: 50%;
-    background: var(--xtra-light-color);
     margin: 0 14px 0 0;
 }
 
-.filter li a span:after {
+.filter span {
+    min-width: 2.5em;
+    background: var(--xtra-light-color);
+    margin: 0 10px 0 0;
+}
+
+.infoContainer {
+    border: 2px solid var(--alt-light-color);
+    min-width: 1.7em;
+}
+
+.filter span::after,
+.infoContainer::after {
     content: '';
     padding-bottom: 100%;
 }
-
 /* ------ end ------ */
 
 .resultContainer {
@@ -275,10 +301,6 @@ button {
 
 .card .txt {
     margin: 0 14px;
-}
-
-.fa-ico {
-    height: 18px;
 }
 
 .star {
@@ -398,7 +420,7 @@ footer {
 
 /* hover */
 .card:hover,
-button:hover {
+.filtersContainer button:hover {
     background: white;
     box-shadow: var(--box-shadow-hover);
     border-color: white;
@@ -406,7 +428,7 @@ button:hover {
 
 .card:hover,
 a:hover,
-button:hover {
+.filtersContainer button:hover {
     opacity: 1;
     transform: scale(1.01);
     transition: all .35s cubic-bezier(.25, .45, .45, .95);
