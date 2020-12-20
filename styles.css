@@ -252,13 +252,14 @@ button {
     margin: 0 14px;
 }
 
+.fa-ico {
+    height: 18px;
+}
+
 .star {
     margin: 0 -1.2px;
     padding: 0;
-}
-
-.fa-ico {
-    height: 18px;
+    height: 14px;
 }
 
 .chart {
