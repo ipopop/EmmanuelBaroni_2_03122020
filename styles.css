@@ -2,10 +2,13 @@
 
 :root {
     --main-txt-color: rgba(36, 46, 66, 0.7);
+    --alt-txt-color: rgba(28, 47, 85, 0.7);
     --xtra-color: #0065FC;
+    --alt-xtra-color: #99c2ff;
     --main-bg-color: hsl(0, 0%, 99%);
     --xtra-bg-color: #F2F2F2;
     --xtra-light-color: #DEEBFF;
+    --alt-light-color: #f2f2f3;
     --dark-color: #242e42;
     --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.05);
     --box-shadow-hover: 0 4px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
@@ -27,7 +30,7 @@ html {
     font-family: 'Raleway', sans-serif;
     letter-spacing: -0.02em;
     line-height: 1.5rem;
-    color: var(--main-txt-color);
+    color: var(--alt-txt-color);
     scroll-behavior: smooth;
 }
 
@@ -36,7 +39,7 @@ body {
     display: flex;
     flex-direction: column; */
     background-color: var(--main-bg-color);
-    color: var(--main-txt-color);
+    color: var(--alt-txt-color);
 }
 
 main {
@@ -52,6 +55,7 @@ button {
     text-decoration: none;
     cursor: pointer;
     opacity: .9;
+    color: var(--alt-txt-color);
 }
 
 h2 {
@@ -156,7 +160,7 @@ button {
 .asideResult {
     padding: 37px;
     border-radius: 18px;
-    background: var(--xtra-bg-color);
+    background: var(--alt-light-color);
 }
 
 .activityContainer {
@@ -268,7 +272,7 @@ button {
 }
 
 .filter a {
-    color: var(--main-txt-color);
+    color: var(--alt-txt-color);
 }
 
 .activityContainer h2 {
@@ -278,7 +282,7 @@ button {
 
 .card h3,
 .card p {
-    color: var(--main-txt-color);
+    color: var(--alt-txt-color);
 }
 
 .card span {
@@ -327,7 +331,7 @@ button {
 footer {
     padding: 44px;
     width: 100vw;
-    background: var(--xtra-bg-color);
+    background: var(--alt-light-color);
     margin-top: 12px;
 }
 
