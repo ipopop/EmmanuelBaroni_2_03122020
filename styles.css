@@ -54,8 +54,10 @@ a,
 button {
     text-decoration: none;
     cursor: pointer;
-    opacity: .9;
     color: var(--alt-txt-color);
+    opacity: .9;
+    transform: scale(1);
+    transition: all .85s cubic-bezier(.25, .45, .45, .95)
 }
 
 h2 {
