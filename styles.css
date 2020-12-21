@@ -42,13 +42,16 @@ body {
 main {
     padding: 40px;
 }
+/* end global rules */
+
 
 a {
     color: var(--xtra-color);
 }
 
 a,
-button {
+button,
+.card {
     text-decoration: none;
     cursor: pointer;
     color: var(--alt-txt-color);
@@ -69,6 +72,14 @@ li {
 
 img {
     overflow: auto;
+}
+
+button {
+    margin: 28px;
+    background: white;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
 }
 
 #rooms figure img,
@@ -128,14 +139,6 @@ img {
 
 .filtr {
     margin: 0 10px;
-}
-
-button {
-    margin: 28px;
-    background: white;
-    cursor: pointer;
-    font-size: 18px;
-    border: none;
 }
 
 .filtersContainer button {
