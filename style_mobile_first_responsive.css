@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,800;1,400&display=swap');
+
+/* ---- reset & common styles ---- */
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5rem;
+    color: black;
+    scroll-behavior: smooth;
+}
+
+body, ul, h1, h2, h3, p, button, div, a, a:visited, a:hover {
+    text-decoration: none;
+}
+/* ---- end reset & common styles ---- */
+
+/* ---- basic HTML elements ---- */
+h1, h2 {
+    font-size: 1.33rem;
+}
+
+h3 {
+    font-size: 1.125rem;
+}
+
+a, button, .card {
+    cursor: pointer;
+    color: black;
+    transform: scale(1);
+    transition: all .5s cubic-bezier(.25, .45, .45, .95)
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    overflow: auto;
+}
+
+button {
+    margin: 1.75rem;
+    background: white;
+    cursor: pointer;
+    font-size: 1rem;
+    border: none;
+}
+
+figcaption {
+    width: 95%;
+}
+/* ---- end basic HTML elements ---- */
+
+/* ---- flex center ---- */
+.h-center {
+    display: flex;
+    justify-content: center;
+}
+
+.v-center {
+    display: flex;
+    align-items: center;
+}
+/* ---- end flex center ---- */
+
+/* ---- placeholder img & icons width & height ---- */
+.map-marker, .search, .money-bill-wave, .heart, .dog {
+    height: 1.125rem;
+}
+
+.map-marker, .search {
+    width: 3.125rem;
+}
+
+.money-bill-wave {
+    width: 1.4375rem;
+}
+
+.child {
+    width: 0.875rem;
+    height: 1.125rem;
+}
+
+.heart {
+    width: 1.125rem;
+}
+
+.dog {
+    width: 1.25rem;
+}
+
+.info__icon {
+    width: 0.3125rem;
+    height: 0.75rem;
+}
+
+.star, .star-o {
+    display: inline-block;
+    margin: 0 -0.1875rem;
+    padding: 0;
+    width: 0.9375rem;
+    height: 0.6875rem;
+}
+
+.chart {
+    margin-top: 0.375rem;
+    height: 1.3rem;
+}
+
+.pop-1, .pop-2, .pop-3 {
+    width: 5.375rem;
+    height: 8.3125rem;
+}
+
+#rooms figure img {
+    width: 20.8125rem;
+    height: 7rem;
+}
+/* ---- end placeholder img & icons width & height ---- */
+
+/* ---- header ---- */
+.header__topbar {
+    margin: 28px 18px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__subscription {
+    margin-top: 0.8rem;
+    font-weight: 800;
+    color: #0065fc;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    text-align: center;
+    width: 50vw;
+    padding-bottom: 0.5rem;
+    font-weight: 500;
+    border-bottom: 3px solid #efeff0;
+}
+
+nav a:hover {
+    border-bottom-color: #0065fc;
+    color: #0065fc;
+}
+
+.lg {
+    display: none;
+}
+/* ---- end header ---- */
+
+/* search__section */
+.header__title {
+    margin: 14px 0;
+    padding: 18px;
+}
+
+.header__title h1 {
+    margin-bottom: 15px;
+}
+
+/* ---- mobile landscape ------------------------------------------- */
+@media (min-width:568px) {
+    .sm {
+        display: none;
+    }
+
+    .lg {
+        display: inline;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 3.473% 3.473% 0 3.473%;
+    }
+
+    .header__topbar {
+        margin: 0;
+    }
+
+    .header__navbar {
+        display: flex;
+    }
+
+    nav {
+        display: block;
+        height: auto;
+    }
+
+    nav a {
+        display: inline;
+        text-align: center;
+        padding: 3.44vw 31px 0;
+        border-bottom: hidden;
+        border-top: 3px solid #efeff0;
+    }
+
+    nav a:hover {
+        border-color: #0065fc;
+    }
+
+    .nav__subscription.lg {
+        margin: 0 0 0 31px;
+    }
+
+    .header__title {
+        margin: 18px 0 0;
+        padding: 18px 3.473%;
+    }
+
+    .header__title h1 {
+        margin-bottom: 3px;
+    }
+}
