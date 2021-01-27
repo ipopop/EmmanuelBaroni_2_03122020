@@ -17,6 +17,10 @@ html {
 body, ul, h1, h2, h3, p, button, div, a, a:visited, a:hover {
     text-decoration: none;
 }
+
+main {
+    margin: 0 auto;
+}
 /* ---- end reset & common styles ---- */
 
 /* ---- basic HTML elements ---- */
@@ -43,6 +47,7 @@ img {
     max-width: 100%;
     display: block;
     overflow: auto;
+    image-rendering: auto;
 }
 
 button {
@@ -120,14 +125,14 @@ figcaption {
 }
 
 #rooms figure img {
-    width: 20.8125rem;
+    width: max-content;
     height: 7rem;
 }
 /* ---- end placeholder img & icons width & height ---- */
 
 /* ---- header ---- */
 .header__topbar {
-    margin: 28px 18px 20px;
+    margin: 28px 20px 20px;
     display: flex;
     justify-content: space-between;
 }
@@ -161,7 +166,7 @@ nav a:hover {
 
 .header__title {
     margin: 14px 0;
-    padding: 18px;
+    padding: 20px;
 }
 
 .header__title h1 {
@@ -171,7 +176,7 @@ nav a:hover {
 
 /* search__section */
 .search__section {
-    padding: 0 18px;
+    padding: 0 20px;
 }
 
     /* search__bar */
@@ -300,7 +305,6 @@ nav a:hover {
     .search__filter span,
     .info__icon__container {
         max-width: 100%;
-        margin: 0 0.875rem 0 0;
         border-radius: 50%;
     }
 
@@ -338,11 +342,9 @@ nav a:hover {
 /* end search__section */
 
 /* result__section */
-.result__section {
-    padding: 18px;
-}
-    /* ---- result__info ---- */
-    .result__info {
+/* ---- result__info ---- */
+.result__info {
+        padding: 20px;
         flex-direction: row;
         align-items: flex-start;
         margin-bottom: 0;
@@ -351,7 +353,6 @@ nav a:hover {
 
     .info__icon__container {
         flex-direction: row;
-        margin-bottom: 1.875rem;
     }
 
     .info__icon {
@@ -360,21 +361,171 @@ nav a:hover {
 
     .result__info p {
         width: 78.2vw;
+        margin-left: 10px;
         font-size: 1rem;
         letter-spacing: -0.005rem;
     }
     /* -- end result__info -- */
-    
+
+    /* ---- result global sections ---- */
+    .result__rooms__and__popular__container {
+        display: grid;
+        max-width: 100%;
+    }
+
+    .rooms__section, .popular__section, .activity__section {
+        padding: 1.125rem;
+        border-radius: 0;
+    }
+
+    .rooms__section, .popular__section {
+        background: hsl(240, 4%, 94%);
+    }
+
+    .popular__title, .rooms__card__content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 95%;
+    }
+    /* ---- end result global sections ---- */
+
+    /* ---- cards ---- */
+    .card {
+        display: flex;
+        width: 15.4375rem;
+        margin: 0;
+        padding: 0;
+        background: white;
+        border: solid 0.313rem white;
+        border-radius: 1.125rem;
+        box-shadow: 0 0.25rem 0.375rem -0.0625rem rgba(0, 0, 0, 0.05), 0 0.125rem 0.5rem 0.25rem rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+    }
+
+    .card h3 {
+        font-size: 1rem;
+    }
+
+    .card p {
+        margin-top: 0.125rem;
+        font-size: .9rem;
+    }
+
+    .card span {
+        position: absolute;
+        bottom: 0.125rem;
+        color: #0065fc;
+    }
+
+    .card__txt, .rooms__card__content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    /* ---- end cards ---- */
+
+    /* ---- rooms cards ---- */
+    .rooms__cards__container {
+        flex-wrap: wrap;
+        gap: 0.625rem;
+    }
+
+    .rooms__section {
+        grid-row-start: 2;
+        margin-top: 0.9rem;
+        background: white;
+    }
+
+    .rooms__card {
+        max-width: 333px;
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1 0 233px;
+        height: 12.375rem;
+    }
+
+    .rooms__section h2 {
+        margin-bottom: 16px;
+    }
+
+    .rooms__section h3 {
+        margin-top: 1.75rem;
+    }
+
+    .rooms__card h3 {
+        margin-top: 0.3125rem;
+    }
+
+    .rooms__card figcaption {
+        margin-left: 0.875rem;
+    }
+
+    .rooms__card p {
+        line-height: 0.875rem;
+    }
+
+    .rooms__card__content {
+        margin: 0 0.875rem;
+    }
+    /* ---- end rooms cards ---- */
+
+    /* ---- popular section ---- */
+    .popular__section {
+        grid-row-start: 1;
+        margin: 0.625rem 0 0 0;
+        padding: 2rem 0 2.1875rem;
+    }
+
+    .popular__section h2 {
+        margin-bottom: 1.5rem;
+        margin-left: 1.125rem;
+    }
+
+    .popular__card__txt h3 {
+        margin-left: 0;
+        line-height: 1.125rem;
+    }
+
+    .popular__section figure img {
+        width: 7.8125rem;
+        height: 8.3125rem;
+    }
+
+    .popular__card__content {
+        position: absolute;
+        height: 100%;
+        left: 9rem;
+        padding-top: 0.5625rem;
+    }
+
+    .popular__card {
+        max-width: 333px;
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1 0 294px;
+        height: 8.875rem;
+        overflow: hidden;
+    }
+
+    .popular__cards__container {
+        flex-wrap: wrap;
+        gap: 0.625rem;
+    }
+    /* ---- end popular section ---- */
 /* end result__section */
-.result__rooms__and__popular__container, .result__activity__section, footer {
+
+.result__activity__section, footer {
     display: none;
 }
 
-/* ---- mobile landscape ------------------------------------------- */
+/* ---- from mobile landscape (to desktop : max 1440px) ------------------------------------------- */
 @media (min-width:568px) {
     main {
         max-width: 1440px;
-        padding:  3.473%;
+        padding:  3.473vw;
     }
 
     .sm, .btn.sm {
@@ -408,7 +559,7 @@ nav a:hover {
     nav a {
         display: inline;
         text-align: center;
-        padding: 3.44vw 31px 0;
+        padding: 3.5vw 31px 0;
         border-bottom: hidden;
         border-top: 3px solid #efeff0;
     }
@@ -422,8 +573,8 @@ nav a:hover {
     }
 
     .header__title {
-        margin: 18px 0 0;
-        padding: 18px 0 15px 0;
+        margin: 20px 0 0;
+        padding: 20px 0 15px 0;
     }
 
     .header__title h1 {
@@ -451,11 +602,11 @@ nav a:hover {
         background: #0065fc;
         min-height: 50px;
         min-width: 130px;
-        border-radius: 0 18px 18px 0;
+        border-radius: 0 20px 20px 0;
     }
     /* end search__section */
 
-    /* ---- filter ---- */    
+    /* ---- filter section ---- */    
     .search__filter li {
         margin-bottom: auto;
     }
@@ -494,9 +645,82 @@ nav a:hover {
         font-weight: bold;
         margin: 16px 6px;
     }
-    /* ---- end filter ---- */
+    /* ---- end filter section ---- */
 
+    /* ---- result__section ---- */
     .result__section {
         padding: 16px 0;
+    }
+
+    .result__info {
+        padding: 0 0 20px;
+    }
+
+    .result__rooms__and__popular__container {
+        column-gap: 32px;
+    }
+
+    .rooms__section, .popular__section, .activity__section {
+        border-radius: 18px;
+        padding: 38px;
+    }
+
+    /* ---- rooms section ---- */
+    #rooms {
+        margin-top: 10px;
+        /* max-width: 879px; */
+        background: hsl(240, 4%, 94%);
+    }
+
+    #rooms > h3:nth-child(3) {
+        margin-top: 36px;
+    }
+
+    .rooms__section h2 {
+        margin-bottom: 24px;
+    }
+
+    /* .rooms__card {
+        width: auto;
+        min-width: 212px;
+        max-width: 100%;
+    } */
+    
+    .rooms__cards__container, .popular__cards__container {
+        gap: 1.5rem;
+    }
+    /* ---- end rooms section ---- */
+    
+    /* ---- end popular section ---- */
+    .popular__section {
+        margin-top: 0.625rem;
+    }
+
+    .popular__title {
+        width: auto;
+    }
+    
+    .popular__section h2 {
+        margin-left: 0;
+    }
+    
+    /* .popular__card {
+        width: auto;
+        min-width: 300px;
+        max-width: 100%;
+    } */
+    /* ---- end popular section ---- */
+    /* ---- end result__section ---- */
+}
+
+@media (min-width:1280px) {
+    .result__rooms__and__popular__container {
+        grid-template-columns: 3fr 1fr;
+        column-gap: 2.5rem;
+    }
+
+    .popular__section {
+        grid-row-start: 2;
+        min-width: 26rem;
     }
 }
