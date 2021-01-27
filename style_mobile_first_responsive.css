@@ -158,9 +158,7 @@ nav a:hover {
 .lg {
     display: none;
 }
-/* ---- end header ---- */
 
-/* search__section */
 .header__title {
     margin: 14px 0;
     padding: 18px;
@@ -169,21 +167,108 @@ nav a:hover {
 .header__title h1 {
     margin-bottom: 15px;
 }
+/* ---- end header ---- */
+
+/* search__section */
+.search__section {
+    padding-left: 1.15rem;
+}
+
+    /* search__bar */
+    form {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 20.9375rem;
+        max-width: 26.25rem;
+        height: 3.375rem;
+        /* margin-top: 1rem; */
+        background: white;
+        border: solid 0.125rem #f2f2f2;
+        border-radius: 1.25rem;
+    }
+
+    form img {
+        min-width: 3.125rem;
+    }
+
+    form input {
+        width: 12.1875rem;
+        font-size: 1.125rem;
+        font-weight: bold;
+        border: none;
+        opacity: .8;
+    }
+
+    .search__btn {
+        min-height: 3.125rem;
+        min-width: 8.125rem;
+        margin: 0;
+        padding: 0;
+        color: white;
+        background: #0065fc;
+        border-radius: 0 1.125rem 1.125rem 0;
+    }
+
+    .btn.sm, form span {
+        min-height: 3.125rem;
+        min-width: 3.125rem;
+        background: #f2f2f2;
+        border-radius: 1.125rem 0 0 1.125rem;
+    }
+
+    .btn.sm {
+        display: flex;
+        background: #0065fc;
+        border-radius: 1.125rem;
+        cursor: pointer;
+    }
+
+    #search__input {
+        width: 62%;
+    }
+
+    ::placeholder {
+        font-style: italic;
+        opacity: .4;
+    }
+
+    #search__input:focus-visible::placeholder {
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.2s ease-in-out;
+    }
+
+    #search__input:focus-visible {
+        outline: none;
+        background: #deebff;
+    }
+        
+    #search__input:focus-within {
+        box-shadow: 0 0 0 4px #deebff;
+    }
+    /* end search__bar */
+/* end search__section */
 
 /* ---- mobile landscape ------------------------------------------- */
 @media (min-width:568px) {
-    .sm {
+    main {
+        max-width: 1440px;
+        padding:  3.473%;
+    }
+
+    .sm, .btn.sm {
         display: none;
     }
 
-    .lg {
+    .lg, .btn.lg {
         display: inline;
     }
 
+    /* ---- header ---- */
     .header {
         display: flex;
         justify-content: space-between;
-        padding: 3.473% 3.473% 0 3.473%;
+        padding: 0;
     }
 
     .header__topbar {
@@ -217,10 +302,35 @@ nav a:hover {
 
     .header__title {
         margin: 18px 0 0;
-        padding: 18px 3.473%;
+        padding: 18px 0 15px 0;
     }
 
     .header__title h1 {
         margin-bottom: 3px;
     }
+    /* ---- end header ---- */
+
+    /* search__section */
+    .search__section {
+        padding: 0;
+    }
+
+    form {
+        width: auto;
+    }
+
+    #search__input {
+        width: 50%;
+    }
+
+    .search__btn {
+        margin: 0;
+        padding: 0;
+        color: white;
+        background: #0065fc;
+        min-height: 50px;
+        min-width: 130px;
+        border-radius: 0 18px 18px 0;
+    }
+    /* end search__section */
 }
