@@ -171,7 +171,7 @@ nav a:hover {
 
 /* search__section */
 .search__section {
-    padding-left: 1.15rem;
+    padding: 0 18px;
 }
 
     /* search__bar */
@@ -247,7 +247,128 @@ nav a:hover {
         box-shadow: 0 0 0 4px #deebff;
     }
     /* end search__bar */
+
+    /* ---- filter ---- */
+    .search__filter {
+        margin: 0.625rem 0 0;
+    }
+
+    .search__filter, .search__filter ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .search__filter h3 {
+        margin: 0;
+        padding: 0;
+        margin-top: 1.25rem;
+        margin-bottom: 0.75rem;
+        font-size: 1.125rem;
+    }
+
+    .search__filter ul {
+        margin: 0;
+    }
+
+    .search__filter li {
+        margin-right: 0.625rem;
+        margin-bottom: 0.625rem;
+    }
+
+    .search__filter button {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0 1rem 0 0;
+        font-weight: bold;
+        border: solid 0.1875rem #f2f2f2;
+        border-radius: 1.75rem;
+    }
+
+    .search__filter a {
+        color: black;
+    }
+    
+    .search__filter span {
+        min-width: 2.97rem;
+    }
+    /* ---- end filter ---- */
+
+    /* ---- search bar icons circle ---- */
+    .search__filter span,
+    .info__icon__container {
+        max-width: 100%;
+        margin: 0 0.875rem 0 0;
+        border-radius: 50%;
+    }
+
+    .search__filter span {
+        min-width: 2.75rem;
+        margin: 0 0.625rem 0 0;
+        background: #deebff;
+    }
+
+    .info__icon__container {
+        min-width: 1.7rem;
+        border: 0.125rem solid hsl(240, 4%, 94%);
+    }
+
+    .search__filter span::after, .info__icon__container::after {
+        content: '';
+        padding-bottom: 100%;
+    }
+    /* ---- end search bar icons circle ---- */
+    
+    /* ---- hover ---- */
+    .search__filter button:hover {
+        background: white;
+        border-color: white;
+        box-shadow: 0 0.25rem 0.9375rem -0.1875rem rgba(0, 0, 0, 0.1), 0 0.25rem 0.375rem -0.125rem rgba(0, 0, 0, 0.025);
+    }
+    
+    .search__filter button:hover {
+        color: #0065fc;
+        opacity: 1;
+        transform: scale(1.01);
+        transition: all .3s cubic-bezier(.25, .45, .45, .95);
+    }
+    /* end hover */
 /* end search__section */
+
+/* result__section */
+.result__section {
+    padding: 18px;
+}
+    /* ---- result__info ---- */
+    .result__info {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 0;
+        font-size: 1.125rem;
+    }
+
+    .info__icon__container {
+        flex-direction: row;
+        margin-bottom: 1.875rem;
+    }
+
+    .info__icon {
+        height: 0.75rem;
+    }
+
+    .result__info p {
+        width: 78.2vw;
+        font-size: 1rem;
+        letter-spacing: -0.005rem;
+    }
+    /* -- end result__info -- */
+    
+/* end result__section */
+.result__rooms__and__popular__container, .result__activity__section, footer {
+    display: none;
+}
 
 /* ---- mobile landscape ------------------------------------------- */
 @media (min-width:568px) {
@@ -333,4 +454,49 @@ nav a:hover {
         border-radius: 0 18px 18px 0;
     }
     /* end search__section */
+
+    /* ---- filter ---- */    
+    .search__filter li {
+        margin-bottom: auto;
+    }
+
+    .search__filter {
+        margin-left: 8px;
+    }
+    
+    .search__filter,
+    .search__filter ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .search__filter h3 {
+        margin: 0 4px 0 0;
+        font-size: 1.125rem;
+    }
+
+    .search__filter ul {
+        margin: 0 0.625rem;
+    }
+
+    .search__filter span {
+        margin: 0 24px 0 0;
+    }
+
+    .search__filter button {
+        border: solid 0.1875rem #f2f2f2;
+        border-radius: 1.75rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 24px 0 0;
+        font-weight: bold;
+        margin: 16px 6px;
+    }
+    /* ---- end filter ---- */
+
+    .result__section {
+        padding: 16px 0;
+    }
 }
