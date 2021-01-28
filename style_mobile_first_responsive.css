@@ -43,8 +43,11 @@ li {
 }
 
 img {
-    max-width: 100%;
     display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
     overflow: auto;
     image-rendering: auto;
 }
@@ -74,6 +77,15 @@ figcaption {
 /* ---- end flex center ---- */
 
 /* ---- placeholder img & icons width & height ---- */
+.header__topbar img {
+    width: 95px;
+    height: 45px;
+}
+
+.fa-ico {
+    width: 20.8px;
+}
+
 .map-marker, .search, .money-bill-wave, .heart, .dog {
     height: 1.125rem;
 }
@@ -125,6 +137,15 @@ figcaption {
 #rooms figure img {
     width: max-content;
     height: 7rem;
+}
+
+.masonry img {
+    max-width: 450px;
+    max-height: 300px;
+}
+
+.activ__fig-2 img {
+    max-width: 300px;
 }
 /* ---- end placeholder img & icons width & height ---- */
 
@@ -262,7 +283,7 @@ nav a:hover {
         align-items: center;
     }
 
-    .search__filter h3 {
+    .search__filter h2 {
         margin: 0;
         padding: 0;
         margin-top: 1.25rem;
@@ -501,7 +522,7 @@ nav a:hover {
     /* ---- end popular section ---- */
 /* end result__section */
 
-.result__activity__section, footer {
+footer {
     display: none;
 }
 
@@ -607,7 +628,7 @@ nav a:hover {
         align-items: center;
     }
 
-    .search__filter h3 {
+    .search__filter h2 {
         margin: 0 4px 0 0;
         font-size: 1.125rem;
     }
