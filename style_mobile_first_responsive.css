@@ -382,7 +382,6 @@ nav a:hover {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        width: 95%;
     }
     /* ---- end result global sections ---- */
 
@@ -470,7 +469,6 @@ nav a:hover {
 
     .popular__section h2 {
         margin-bottom: 1.5rem;
-        margin-left: 1.125rem;
     }
 
     .popular__card__txt h3 {
