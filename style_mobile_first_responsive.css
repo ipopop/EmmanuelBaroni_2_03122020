@@ -33,7 +33,6 @@ h3 {
 }
 
 a, button, .card {
-    cursor: pointer;
     color: black;
     transform: scale(1);
     transition: all .5s cubic-bezier(.25, .45, .45, .95)
@@ -51,7 +50,6 @@ img {
 }
 
 button {
-    margin: 1.75rem;
     background: white;
     cursor: pointer;
     font-size: 1rem;
@@ -174,19 +172,18 @@ nav a:hover {
 }
 /* ---- end header ---- */
 
-/* search__section */
+/* ---- search__section ----- */
 .search__section {
     padding: 0 20px;
 }
 
-    /* search__bar */
+    /* ---- search__bar ---- */
     form {
         flex-direction: row;
         justify-content: space-between;
         width: 20.9375rem;
         max-width: 26.25rem;
         height: 3.375rem;
-        /* margin-top: 1rem; */
         background: white;
         border: solid 0.125rem #f2f2f2;
         border-radius: 1.25rem;
@@ -251,7 +248,7 @@ nav a:hover {
     #search__input:focus-within {
         box-shadow: 0 0 0 4px #deebff;
     }
-    /* end search__bar */
+    /* ---- end search__bar ---- */
 
     /* ---- filter ---- */
     .search__filter {
@@ -284,7 +281,6 @@ nav a:hover {
 
     .search__filter button {
         flex-direction: row;
-        flex-wrap: wrap;
         margin: 0;
         padding: 0 1rem 0 0;
         font-weight: bold;
@@ -338,12 +334,12 @@ nav a:hover {
         transform: scale(1.01);
         transition: all .3s cubic-bezier(.25, .45, .45, .95);
     }
-    /* end hover */
+    /* ---- end hover ---- */
 /* end search__section */
 
-/* result__section */
-/* ---- result__info ---- */
-.result__info {
+/* ---- result__section ---- */
+    /* ---- result__info ---- */
+    .result__info {
         padding: 20px;
         flex-direction: row;
         align-items: flex-start;
@@ -370,7 +366,6 @@ nav a:hover {
     /* ---- result global sections ---- */
     .result__rooms__and__popular__container {
         display: grid;
-        max-width: 100%;
     }
 
     .rooms__section, .popular__section, .activity__section {
@@ -394,9 +389,6 @@ nav a:hover {
     /* ---- cards ---- */
     .card {
         display: flex;
-        width: 15.4375rem;
-        margin: 0;
-        padding: 0;
         background: white;
         border: solid 0.313rem white;
         border-radius: 1.125rem;
@@ -440,10 +432,8 @@ nav a:hover {
     }
 
     .rooms__card {
-        max-width: 333px;
-        display: flex;
-        flex-wrap: wrap;
-        flex: 1 0 233px;
+        min-width: 212px;
+        flex: 1 0 31.3%;
         height: 12.375rem;
     }
 
@@ -476,7 +466,6 @@ nav a:hover {
     .popular__section {
         grid-row-start: 1;
         margin: 0.625rem 0 0 0;
-        padding: 2rem 0 2.1875rem;
     }
 
     .popular__section h2 {
@@ -502,11 +491,8 @@ nav a:hover {
     }
 
     .popular__card {
-        max-width: 333px;
-        display: flex;
-        flex-wrap: wrap;
+        max-width: 370px;
         flex: 1 0 294px;
-        height: 8.875rem;
         overflow: hidden;
     }
 
@@ -521,7 +507,7 @@ nav a:hover {
     display: none;
 }
 
-/* ---- from mobile landscape (to desktop : max 1440px) ------------------------------------------- */
+/* ---- from mobile landscape to desktop (max-width 1440px) ---- */
 @media (min-width:568px) {
     main {
         max-width: 1440px;
@@ -582,7 +568,7 @@ nav a:hover {
     }
     /* ---- end header ---- */
 
-    /* search__section */
+    /* ---- search__section ---- */
     .search__section {
         padding: 0;
     }
@@ -604,7 +590,7 @@ nav a:hover {
         min-width: 130px;
         border-radius: 0 20px 20px 0;
     }
-    /* end search__section */
+    /* ---- end search__section ---- */
 
     /* ---- filter section ---- */    
     .search__filter li {
@@ -665,51 +651,38 @@ nav a:hover {
         padding: 38px;
     }
 
-    /* ---- rooms section ---- */
-    #rooms {
-        margin-top: 10px;
-        /* max-width: 879px; */
-        background: hsl(240, 4%, 94%);
-    }
+        /* ---- rooms section ---- */
+        #rooms {
+            margin-top: 10px;
+            background: hsl(240, 4%, 94%);
+        }
 
-    #rooms > h3:nth-child(3) {
-        margin-top: 36px;
-    }
+        #rooms > h3:nth-child(3) {
+            margin-top: 36px;
+        }
 
-    .rooms__section h2 {
-        margin-bottom: 24px;
-    }
+        .rooms__section h2 {
+            margin-bottom: 24px;
+        }
+        
+        .rooms__cards__container, .popular__cards__container {
+            gap: 1.5rem;
+        }
+        /* ---- end rooms section ---- */
+        
+        /* ---- end popular section ---- */
+        .popular__section {
+            margin-top: 0.625rem;
+        }
 
-    /* .rooms__card {
-        width: auto;
-        min-width: 212px;
-        max-width: 100%;
-    } */
-    
-    .rooms__cards__container, .popular__cards__container {
-        gap: 1.5rem;
-    }
-    /* ---- end rooms section ---- */
-    
-    /* ---- end popular section ---- */
-    .popular__section {
-        margin-top: 0.625rem;
-    }
-
-    .popular__title {
-        width: auto;
-    }
-    
-    .popular__section h2 {
-        margin-left: 0;
-    }
-    
-    /* .popular__card {
-        width: auto;
-        min-width: 300px;
-        max-width: 100%;
-    } */
-    /* ---- end popular section ---- */
+        .popular__title {
+            width: auto;
+        }
+        
+        .popular__section h2 {
+            margin-left: 0;
+        }
+        /* ---- end popular section ---- */
     /* ---- end result__section ---- */
 }
 
