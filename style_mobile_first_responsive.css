@@ -832,8 +832,10 @@ footer {
     
     .footer__container {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
         column-count: 3;
+        justify-content: space-between;
         gap: 6%;
     }
     
@@ -859,6 +861,7 @@ footer {
     }
 
     .footer__container {
+        justify-content: start;
         gap: 18%;
     }
 }
