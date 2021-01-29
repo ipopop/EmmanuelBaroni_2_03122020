@@ -898,6 +898,10 @@ footer {
             min-width: 100%;
         }
 
+        div.masonry__box:nth-child(2) {
+            flex-direction: row;
+        }
+
         .footer__container {
             gap: 300px;
         }
