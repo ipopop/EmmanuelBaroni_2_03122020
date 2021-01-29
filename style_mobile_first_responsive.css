@@ -164,7 +164,7 @@ nav {
 
 nav a {
     text-align: center;
-    width: 50vw;
+    width: 50%;
     padding-bottom: 0.5rem;
     font-weight: 500;
     border-bottom: 3px solid #efeff0;
@@ -354,7 +354,7 @@ nav a:hover {
     /* ---- end hover ---- */
 /* end search__section */
 
-/* ---- result__section ---- */
+/* ---- search result section ---- */
     /* ---- result__info ---- */
     .result__info {
         padding: 20px;
@@ -373,7 +373,7 @@ nav a:hover {
     }
 
     .result__info p {
-        width: 78.2vw;
+        width: 88.2%;
         margin-left: 10px;
         font-size: 1rem;
         letter-spacing: -0.005rem;
@@ -516,7 +516,7 @@ nav a:hover {
         gap: 0.625rem;
     }
     /* ---- end popular section ---- */
-/* end result__section */
+/* end search result section */
 
 /* ---- activity section ---- */
 .result__activity__section {
@@ -743,8 +743,8 @@ footer {
     }
     /* ---- end filter section ---- */
 
-    /* ---- result__section ---- */
-    .result__section {
+    /* ---- search result section ---- */
+    .search__result {
         padding: 16px 0;
     }
 
