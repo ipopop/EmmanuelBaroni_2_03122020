@@ -418,6 +418,7 @@ nav a:hover {
 
     .card h3 {
         font-size: 1rem;
+        max-width: 99.99%;
     }
 
     .card p {
@@ -622,7 +623,7 @@ footer {
 /* ---- end footer ---- */
 
 /* ---- from mobile landscape to desktop (max-width 1440px) ---- */
-@media (min-width:568px) {
+@media (min-width:670px) {
     main {
         max-width: 1440px;
         padding: 50px 50px 44px;
