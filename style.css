@@ -392,9 +392,6 @@ nav a:hover {
     .rooms__section, .popular__section {
         padding: 1.125rem;
         border-radius: 0;
-    }
-
-    .rooms__section, .popular__section {
         background: hsl(240, 4%, 94%);
     }
 
@@ -493,6 +490,17 @@ nav a:hover {
         margin-bottom: 1.5rem;
     }
 
+    .popular__cards__container {
+        flex-wrap: wrap;
+        gap: 0.625rem;
+    }
+
+    .popular__card {
+        max-width: 370px;
+        flex: 1 0 294px;
+        overflow: hidden;
+    }
+
     .popular__card__txt h3 {
         margin-left: 0;
         line-height: 1.125rem;
@@ -508,17 +516,6 @@ nav a:hover {
         height: 100%;
         left: 9rem;
         padding-top: 0.5625rem;
-    }
-
-    .popular__card {
-        max-width: 370px;
-        flex: 1 0 294px;
-        overflow: hidden;
-    }
-
-    .popular__cards__container {
-        flex-wrap: wrap;
-        gap: 0.625rem;
     }
     /* ---- end popular section ---- */
 /* end search result section */
@@ -599,14 +596,14 @@ footer {
     background: #efeff0;
 }
 
-.footer__container h3 {
-    margin-bottom: 2%;
-}
-
 .footer__column {
     margin-right: 0;
     padding-bottom: 6%;
     line-height: 1.9rem;
+}
+
+.footer__container h3 {
+    margin-bottom: 2%;
 }
 
 .footer__column:nth-child(2) {
@@ -744,7 +741,7 @@ footer {
         flex-wrap: wrap;
         padding: 0 24px 0 0;
         font-weight: bold;
-        margin: 16px 6px;
+        margin: 8px 2px;
     }
     /* ---- end filter section ---- */
 
@@ -766,68 +763,68 @@ footer {
         padding: 38px;
     }
 
-        /* ---- rooms section ---- */
-        #rooms {
-            margin-top: 10px;
-            background: #efeff0;
-        }
+    /* ---- rooms section ---- */
+    #rooms {
+        margin-top: 10px;
+        background: #efeff0;
+    }
 
-        #rooms > h3:nth-child(3) {
-            margin-top: 36px;
-        }
+    #rooms > h3:nth-child(3) {
+        margin-top: 36px;
+    }
 
-        .rooms__section h2 {
-            margin-bottom: 24px;
-        }
-        
-        .rooms__cards__container, .popular__cards__container {
-            gap: 1.5rem;
-        }
-        /* ---- end rooms section ---- */
-        
-        /* ---- end popular section ---- */
-        .popular__section {
-            margin-top: 0.625rem;
-        }
+    .rooms__section h2 {
+        margin-bottom: 24px;
+    }
+    
+    .rooms__cards__container, .popular__cards__container {
+        gap: 1.5rem;
+    }
+    /* ---- end rooms section ---- */
+    
+    /* ---- end popular section ---- */
+    .popular__section {
+        margin-top: 0.625rem;
+    }
 
-        .popular__title {
-            width: auto;
-        }
-        
-        .popular__section h2 {
-            margin-left: 0;
-        }
-        /* ---- end popular section ---- */
+    .popular__title {
+        width: auto;
+    }
+    
+    .popular__section h2 {
+        margin-left: 0;
+    }
+    /* ---- end popular section ---- */
 
-        /* ---- activity section ---- */
-        .result__activity__section {
-            padding: 5%;
-            background: #efeff0;;
-            border-radius: 20px;
-            margin-top: 4%;
-        }
+    /* ---- activity section ---- */
+    .result__activity__section {
+        padding: 5%;
+        background: #efeff0;;
+        border-radius: 20px;
+        margin-top: 4%;
+    }
 
-        .result__activity__section h2 {
-            margin: 0 5% 5%;
-        }
+    .result__activity__section h2 {
+        margin: 0 5% 5%;
+    }
 
-        .activ__fig-1 img, .activ__fig-4 img {
-            min-width: 220%;
-            height: 385px;
-        }
+    .activ__fig-1 img, .activ__fig-4 img {
+        min-width: 220%;
+        height: 385px;
+    }
 
-        .activity__masonry__container , .masonry__box {
-            gap: 42px;
-        }
-        
-        .masonry {
-            row-gap: 43px;
-        }
+    .activity__masonry__container , .masonry__box {
+        gap: 42px;
+    }
+    
+    .masonry {
+        row-gap: 43px;
+    }
 
-        .masonry figure {
-            min-width: 55vw;
-        }
-        /* ---- end activity section ---- */
+    .masonry figure {
+        min-width: 55vw;
+    }
+    /* ---- end activity section ---- */
     /* ---- end result__section ---- */
 
     /* ---- footer ---- */
@@ -872,6 +869,10 @@ footer {
 }
 
 @media (min-width:1280px) {
+    .search__filter button {
+        margin: 8px 2px;
+    }
+
     .result__rooms__and__popular__container {
         grid-template-columns: 3fr 1fr;
         column-gap: 2.5rem;
@@ -884,6 +885,10 @@ footer {
 
     .masonry figure {
         min-width: 33vw;
+    }
+    
+    .footer__column {
+        padding-bottom: 0;
     }
 
     .footer__column:nth-child(3) {
