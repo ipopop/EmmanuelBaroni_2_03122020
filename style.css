@@ -81,7 +81,7 @@ figcaption {
 /* ---- end flex center ---- */
 
 /* ---- placeholder img & icons width & height ---- */
-.header__topbar img {
+.header img {
     width: 95px;
     height: 45px;
 }
@@ -150,19 +150,29 @@ figcaption {
 /* ---- end placeholder img & icons width & height ---- */
 
 /* ---- header ---- */
-.header__topbar {
-    margin: 28px 20px 20px;
-    display: flex;
-    justify-content: space-between;
+.header {
+    grid-template-columns: 20px max-content 1fr 1fr max-content 20px;
+    grid-template-rows: 28px auto 20px auto;
 }
 
-.nav__subscription {
+.header__logo {
+    min-width: max-content;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    margin-right: auto;
+}
+
+.header__subscription {
+    grid-row-start: 2;
+    grid-column-end: -2;
     margin-top: 0.8rem;
     font-weight: 800;
     color: #0065fc;
 }
 
 nav {
+    grid-row-start: 4;
+    grid-column: 1/8;
     display: flex;
 }
 
@@ -385,7 +395,7 @@ nav a:hover {
     /* -- end result__info -- */
 
     /* ---- result global sections ---- */
-    .result__rooms__and__popular__container {
+    .result__rooms__and__popular__container, .header {
         display: grid;
     }
 
@@ -589,7 +599,7 @@ nav a:hover {
 
 /* ---- footer ---- */
 footer {
-    width: 100vw;
+    /* width: 100vw; */
     min-width: 23.4375rem;
     margin-top: 0.375rem;
     padding: 10% 8%;
@@ -637,19 +647,13 @@ footer {
     /* ---- header ---- */
     .header {
         display: flex;
-        justify-content: space-between;
+        /* justify-content: space-between; */
         padding: 0;
-    }
-
-    .header__topbar {
         margin: 0;
     }
-
-    .header__navbar {
-        display: flex;
-    }
-
+    
     nav {
+        display: flex;
         display: block;
         height: auto;
     }
@@ -666,7 +670,7 @@ footer {
         border-color: #0065fc;
     }
 
-    .nav__subscription.lg {
+    .header__subscription {
         margin: 0 0 0 31px;
     }
 
