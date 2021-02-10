@@ -634,7 +634,7 @@ footer {
 }
 /* ---- end footer ---- */
 
-/* ---- from mobile 250px ---- */
+/* ---- from mobile 220px ---- */
 @media (min-width:220px) and (max-width:319px) {
     nav a:nth-child(1) {
         width: 80%;
@@ -649,7 +649,7 @@ footer {
     }
 }
 
-/* ---- from mobile 250px to 374px ---- */
+/* ---- from mobile 220px to 374px ---- */
 @media (min-width:220px) and (max-width:374px) {
     .card h2, .card h3 {
         font-size: 4.2vw;
@@ -679,20 +679,12 @@ footer {
         left: 44%;
     }
 
-    .rooms__card {
+    .rooms__card, .masonry figure {
         min-width: 85vw;
     }
 
     .activity__masonry__container {
         max-width: 100vw;
-    }
-    
-    .result__rooms__and__popular__container {
-        max-width: auto;
-    }
-
-    .masonry figure {
-        min-width: 85vw;
     }
     
     .masonry img {
@@ -780,6 +772,7 @@ footer {
         min-height: 50px;
         min-width: 130px;
         border-radius: 0 20px 20px 0;
+        font-weight: 500;
     }
     /* ---- end search__section ---- */
 
