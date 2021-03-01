@@ -1,0 +1,5 @@
+1- refactor 'nav' with grid
+2- grey stars
+3- h scroll in 1920p ?
+4- under 320px ?
+5- tahoma on btn ?
